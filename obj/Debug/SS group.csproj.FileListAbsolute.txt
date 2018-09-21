@@ -1,0 +1,26 @@
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\bin\Debug\SS group.exe.config
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\bin\Debug\SS group.exe
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\bin\Debug\SS group.pdb
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\obj\Debug\SS group.csprojAssemblyReference.cache
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\obj\Debug\SS_group.Properties.Resources.resources
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\obj\Debug\SS group.csproj.GenerateResource.cache
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\obj\Debug\SS group.csproj.CoreCompileInputs.cache
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\obj\Debug\SS group.exe
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\obj\Debug\SS group.pdb
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\obj\Debug\SS group.csproj.CopyComplete
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\obj\Debug\SS_group.ROBOMAZE.resources
+C:\Users\Ray\Desktop\SS group\SS group\bin\Debug\SS group.exe.config
+C:\Users\Ray\Desktop\SS group\SS group\bin\Debug\SS group.exe
+C:\Users\Ray\Desktop\SS group\SS group\bin\Debug\SS group.pdb
+C:\Users\Ray\Desktop\SS group\SS group\obj\Debug\SS group.csprojAssemblyReference.cache
+C:\Users\Ray\Desktop\SS group\SS group\obj\Debug\SS_group.ROBOMAZE.resources
+C:\Users\Ray\Desktop\SS group\SS group\obj\Debug\SS_group.Properties.Resources.resources
+C:\Users\Ray\Desktop\SS group\SS group\obj\Debug\SS group.csproj.GenerateResource.cache
+C:\Users\Ray\Desktop\SS group\SS group\obj\Debug\SS group.csproj.CoreCompileInputs.cache
+C:\Users\Ray\Desktop\SS group\SS group\obj\Debug\SS group.csproj.CopyComplete
+C:\Users\Ray\Desktop\SS group\SS group\obj\Debug\SS group.exe
+C:\Users\Ray\Desktop\SS group\SS group\obj\Debug\SS group.pdb
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\bin\Debug\Google.Protobuf.dll
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\bin\Debug\MySql.Data.dll
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\bin\Debug\Google.Protobuf.xml
+C:\Users\Ray\Documents\School\PO\App\SS group\SS group\bin\Debug\MySql.Data.xml
