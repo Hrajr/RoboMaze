@@ -57,6 +57,11 @@ namespace DatabaseConnector
             return true;
         }
 
+        public string nieuwe()
+        {
+            return "";
+        }
+
 
         public List<List<string>> getAllHighscores()
         {
