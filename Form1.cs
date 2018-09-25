@@ -9,18 +9,67 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.IO.Ports;
+using System.Net;
+using EV3WifiLib;
 using DatabaseConnector;
 
 namespace SS_group
 {
     public partial class ROBOMAZE : Form
     {
+        private EV3Wifi myEV3;
+        private Timer messageReceiveTimer;
         private short _minutes, _seconds;
         public ROBOMAZE()
         {
             InitializeComponent();
-        }       
+            messageReceiveTimer = new Timer();
+            messageReceiveTimer.Interval = 100;
+            messageReceiveTimer.Tick += new System.EventHandler(messageReadTimer_Tick);
+            myEV3 = new EV3Wifi();
+            UpdateButtonsAndConnectionInfo();
+        }
+
+        private void UpdateButtonsAndConnectionInfo()
+        {
+            bool isConnected = myEV3.isConnected;
+
+            connectButton.Enabled = !isConnected;
+            disconnectButton.Enabled = isConnected;
+
+            if (isConnected)
+            {
+                connectedDeviceLabel.Text = "Connected to EV3\n" + "IP address:" + myEV3.ipAddress;
+                connectedDeviceLabel.BackColor = Color.LightGreen;
+            }
+            else
+            {
+                connectedDeviceLabel.Text = "No connection";
+                connectedDeviceLabel.BackColor = Color.Red;
+            }
+        }
+
+        private void messageReadTimer_Tick(object sender, EventArgs e)
+        {
+            if (myEV3.isConnected)
+            {
+                string strMessage = myEV3.ReceiveMessage("EV3_OUTBOX0");
+                if (strMessage != "")
+                {
+                    if (btnStart.Visible == true) 
+                    {
+                        btnStart.PerformClick();
+                    }
+                    else
+                    {
+                        btnStop1.PerformClick();
+                    }
+                }
+                
+                
+            }
+        }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -221,6 +270,32 @@ namespace SS_group
 
             db.insertHighscore(textBox1.Text, "", val3, time);
         }
+
+        private void disconnectButton_Click(object sender, EventArgs e)
+        {
+            messageReceiveTimer.Stop();
+            myEV3.Disconnect();
+            UpdateButtonsAndConnectionInfo();
+        }
+
+        private void connectButton_Click(object sender, EventArgs e)
+        {            
+                string ipAddress = ipAddressBox.Text;
+                if (!IPAddress.TryParse(ipAddress, out IPAddress address))
+                {
+                    MessageBox.Show("Fill in valid IP address of EV3");
+                }
+                else if (myEV3.Connect("1234", ipAddress) == true)
+                {
+                    UpdateButtonsAndConnectionInfo();
+                    messageReceiveTimer.Start();
+                }
+                else
+                {
+                    myEV3.Disconnect();
+                    MessageBox.Show("Failed to connect to EV3 with IP address " + ipAddress);
+                }
+            }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
